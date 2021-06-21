@@ -81,11 +81,27 @@ namespace ToDoListAcademia.ConsoleApp
             Console.Write("Digite o nome do Contato: ");
             contato.Nome = Console.ReadLine();
 
-            Console.Write("Digite o e-mail do Contato: ");
-            contato.Email = Console.ReadLine();
+            string email;
+            do
+            {
+                Console.Write("Digite o email do contato: ");
+                email = Console.ReadLine();
 
-            Console.Write("Digite o telefone do Contato: ");
-            contato.Telefone = Console.ReadLine();
+                if (!EnderecoDeEmailValido(email))
+                    ApresentarMensagem("Por favor escreva um endereço de email válido!", Mensagem.Atencao);
+
+            } while (!EnderecoDeEmailValido(email));
+
+            string telefone;
+            do
+            {
+                Console.Write("Digite o número de telefone (9 Números): ");
+                telefone = Console.ReadLine();
+
+                if (!NumeroTelefoneValido(telefone))
+                    ApresentarMensagem("Por favor escreva um número de válido!", Mensagem.Atencao);
+
+            } while (!NumeroTelefoneValido(telefone));
 
             Console.Write("Digite a Empresa do Contato: ");
             contato.Empresa = Console.ReadLine();
