@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 using ToDoListAcademia.Controladores;
 using ToDoListAcademia.Dominio;
 
@@ -33,8 +34,16 @@ namespace ToDoListAcademia.ConsoleApp
             Console.Write("Digite o nome do Contato: ");
             string nome = Console.ReadLine();
 
-            Console.Write("Digite o e-mail do Contato: ");
-            string email = Console.ReadLine();
+            string email;
+            do
+            {
+                Console.Write("Digite o email do contato: ");
+                email = Console.ReadLine();
+
+                if (!EnderecoDeEmailValido(email))
+                    ApresentarMensagem("Por favor escreva um endereço de email válido!", Mensagem.Atencao);
+
+            } while (!EnderecoDeEmailValido(email));
 
             string telefone;
             do
@@ -126,6 +135,13 @@ namespace ToDoListAcademia.ConsoleApp
                 Console.WriteLine(configuracaColunasTabela, contato.Id, contato.Nome, contato.Email, contato.Telefone, contato.Empresa, contato.Cargo);
             }
             Console.ReadLine();
+        }
+
+        private bool EnderecoDeEmailValido(string email)
+        {
+            bool Valido = Regex.IsMatch(email, @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$", RegexOptions.IgnoreCase);
+
+            return Valido;
         }
 
         private bool NumeroTelefoneValido(string numero)
