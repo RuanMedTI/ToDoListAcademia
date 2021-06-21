@@ -48,7 +48,7 @@ namespace ToDoListAcademia.ConsoleApp
             string telefone;
             do
             {
-                Console.Write("Digite o número de telefone (9 Números): ");
+                Console.Write("Digite o número de telefone (DDD + 9 Numeros): ");
                 telefone = Console.ReadLine();
 
                 if (!NumeroTelefoneValido(telefone))
@@ -95,7 +95,7 @@ namespace ToDoListAcademia.ConsoleApp
             string telefone;
             do
             {
-                Console.Write("Digite o número de telefone (9 Números): ");
+                Console.Write("Digite o número de telefone (DDD + 9 Numeros): ");
                 telefone = Console.ReadLine();
 
                 if (!NumeroTelefoneValido(telefone))
@@ -162,7 +162,7 @@ namespace ToDoListAcademia.ConsoleApp
 
         private bool NumeroTelefoneValido(string numero)
         {
-            if (numero.Length < 9)
+            if (numero.Length < 11)
                 return false;
 
             return true;
