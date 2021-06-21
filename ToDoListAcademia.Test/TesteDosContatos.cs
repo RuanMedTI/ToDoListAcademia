@@ -10,7 +10,6 @@ namespace ToDoListAcademia.Test
     {
         public ControladorContatos controlador;
         public Contato contatoTeste;
-
         public TesteDosContatos()
         {
             controlador = new ControladorContatos();
