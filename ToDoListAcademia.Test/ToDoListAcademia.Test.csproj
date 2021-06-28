@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="TesteDaListaTarefa.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TesteDoCompromisso.cs" />
     <Compile Include="TesteDosContatos.cs" />
   </ItemGroup>
   <ItemGroup>

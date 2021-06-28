@@ -203,11 +203,7 @@ namespace ToDoListAcademia.Controladores
                         [DATACRIACAO], 
                         [PRIORIDADE] 
                     FROM 
-                        TBTAREFA
-                    WHERE
-                        [PERCENTUAL] != '100%'
-                    ORDER BY
-                        [PRIORIDADE] ASC, [DATACRIACAO]";
+                        TBLISTA";
 
             comandoSelecao.CommandText = sqlSelecao;
 
@@ -218,6 +214,9 @@ namespace ToDoListAcademia.Controladores
             while (leitorTarefas.Read())
             {
                 int id = Convert.ToInt32(leitorTarefas["ID"]);
+
+                if (leitorTarefas["ID"] != DBNull.Value)
+                    id = Convert.ToInt32(leitorTarefas["ID"]);
 
                 string titulo = Convert.ToString(leitorTarefas["TITULO"]);
 

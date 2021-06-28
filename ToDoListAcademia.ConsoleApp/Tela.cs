@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using ToDoListAcademia.Dominio;
 
 namespace ToDoListAcademia.ConsoleApp
@@ -15,8 +12,6 @@ namespace ToDoListAcademia.ConsoleApp
         {
             Titulo = titulo;
         }
-
-        public abstract void ObterOpcao();
 
         protected void MontarCabecalhoTabela(string configuracaoColunasTabela, params object[] colunas)
         {

@@ -168,9 +168,8 @@ namespace ToDoListAcademia.Controladores
                         [EMPRESA],
                         [CARGO]
                     FROM 
-                        TBCONTATOS
-                    ORDER BY 
-                        [PRIORIDADE] ASC";
+                        TBCONTATOS";
+                    
 
             comandoSelecao.CommandText = sqlSelecao;
 

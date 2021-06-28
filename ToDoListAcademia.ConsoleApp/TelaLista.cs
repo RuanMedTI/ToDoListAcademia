@@ -14,19 +14,6 @@ namespace ToDoListAcademia.ConsoleApp
             controlador = ctrl;
         }
 
-        public override void ObterOpcao()
-        {
-            ConfigurarTela("ToDoList 1.1");
-
-            Console.WriteLine("'1' para cadastrar uma nova tarefa");
-            Console.WriteLine("'2' para editar uma tarefa");
-            Console.WriteLine("'3' para excluir uma tarefa");
-            Console.WriteLine("'4' para visualizar tarefas em aberto");
-            Console.WriteLine("'5' para visualizar tarefas concluídas");
-            Console.WriteLine("'S' para sair");
-
-        }
-
         public void CadastrarNovaTarefa()
         {
             ConfigurarTela("Cadastrando uma nova tarefa...");

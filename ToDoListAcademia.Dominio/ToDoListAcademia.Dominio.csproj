@@ -41,12 +41,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Compromisso.cs" />
     <Compile Include="Contatos.cs" />
     <Compile Include="DominioBase.cs" />
     <Compile Include="Lista.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ScriptDosCompromissos.sql" />
     <Content Include="ScriptsDaLista.sql" />
     <Content Include="ScriptsDosContatos.sql" />
   </ItemGroup>

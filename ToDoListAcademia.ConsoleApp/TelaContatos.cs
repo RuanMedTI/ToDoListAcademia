@@ -15,18 +15,6 @@ namespace ToDoListAcademia.ConsoleApp
             controlador = ctrl;
         }
 
-        public override void ObterOpcao()
-        {
-            ConfigurarTela("Gerenciador de Contatos 1.1");
-
-            Console.WriteLine("'1' para cadastrar uma novo contato");
-            Console.WriteLine("'2' para editar um contato");
-            Console.WriteLine("'3' para excluir um contato");
-            Console.WriteLine("'4' para visualizar todos os contatos");
-            Console.WriteLine("'S' para sair");
-
-        }
-
         public void CadastrarNovoContato()
         {
             ConfigurarTela("Cadastrando uma novo contato...");
