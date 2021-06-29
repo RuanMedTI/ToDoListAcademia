@@ -174,7 +174,8 @@ namespace ToDoListAcademia.Controladores
                         ASSUNTO, 
                         LOCAL, 
                         DATACOMPROMISSO,
-                        HORAINICIO
+                        HORAINICIO,
+                        ID_CONTATO
                     FROM 
                         TBCOMPROMISSOS";
 
@@ -206,6 +207,11 @@ namespace ToDoListAcademia.Controladores
             con.Close();
 
             return compromissos;
+        }
+
+        public List<Compromisso> ObterCompromissosEntre(DateTime inicio, DateTime final, List<Compromisso> registros)
+        {
+            return registros.FindAll(x => x.DataCompromisso >= inicio && x.DataTermino <= final);
         }
     }
 }

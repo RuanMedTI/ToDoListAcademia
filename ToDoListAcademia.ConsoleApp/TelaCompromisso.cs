@@ -97,5 +97,21 @@ namespace ToDoListAcademia.ConsoleApp
             }
             Console.ReadLine();
         }
+
+        public void VisualizarCompromissosEntreDatas()
+        {
+            Console.Clear();
+            Console.Write("Digite a Data Inicial :");
+            DateTime inicio = Convert.ToDateTime(Console.ReadLine());
+            Console.Clear();
+            Console.Write("Digite a Data Final :");
+            DateTime final = Convert.ToDateTime(Console.ReadLine());
+
+            Console.Clear();
+            Console.WriteLine($"Consulta em andamento : {inicio.ToString("d")} e {final.ToString("d")}");
+
+            List<Compromisso> compromissos =
+                controlador.ObterCompromissosEntre(inicio, final, controlador.SelecionarTodosOsCompromissos());
+        }
     }
 }

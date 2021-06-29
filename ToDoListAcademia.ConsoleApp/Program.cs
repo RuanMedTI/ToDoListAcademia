@@ -46,6 +46,7 @@ namespace ToDoListAcademia.ConsoleApp
             Console.WriteLine("Digite 11 para Editar Compromisso");
             Console.WriteLine("Digite 12 para Excluir Compromisso");
             Console.WriteLine("Digite 13 para Visualizar Compromissos");
+            Console.WriteLine("Digite 14 para Visualizar Compromissos Entre Datas");
 
             Console.ResetColor();
 
@@ -122,6 +123,11 @@ namespace ToDoListAcademia.ConsoleApp
             {
                 if (opcao == "13")
                     telaCompromisso.VisualizarTodosOsCompromissos();
+            }
+            if (opcao == "14")
+            {
+                if (opcao == "14")
+                    telaCompromisso.VisualizarCompromissosEntreDatas();
             }
         }
     }
