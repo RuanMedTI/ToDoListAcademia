@@ -104,6 +104,7 @@ namespace ToDoListAcademia.ConsoleApp
                     telaContatos.VisualizarTodosOsContatos();
             }
 
+
             if (opcao == "10")
             {
                 if (opcao == "10")

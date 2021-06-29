@@ -20,7 +20,7 @@ namespace ToDoListAcademia.ConsoleApp
             Console.Write("Digite o Assunto do Compromisso: ");
             string assunto = Console.ReadLine();
 
-            Console.Write("Digite o Local do Compromisso: ");
+            Console.Write("Digite o Local do Compromisso (ou LINK do Meet): ");
             string local = Console.ReadLine();
 
             Console.Write("Digite a Hora do Compromisso (Extenso): ");
@@ -48,7 +48,7 @@ namespace ToDoListAcademia.ConsoleApp
             Console.Write("Digite o Assunto do Compromisso: ");
             compromisso.Assunto = Console.ReadLine();
 
-            Console.Write("Digite o Local do Compromisso: ");
+            Console.Write("Digite o Local do Compromisso (ou LINK do Meet): ");
             compromisso.Local = Console.ReadLine();
 
             Console.Write("Digite a Hora do Compromisso: ");
