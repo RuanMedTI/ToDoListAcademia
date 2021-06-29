@@ -21,14 +21,16 @@ namespace ToDoListAcademia.Controladores
                         [ASSUNTO],
                         [LOCAL],
                         [DATACOMPROMISSO],
-                        [HORAINICIO]
+                        [HORAINICIO],
+                        [ID_CONTATO]
                     )
                     VALUES
                     (
                         @ASSUNTO,
                         @LOCAL,
                         @DATACOMPROMISSO,
-                        @HORAINICIO
+                        @HORAINICIO,
+                        @ID_CONTATO
                     );";
 
             sqlInsercao += @"SELECT SCOPE_IDENTITY();";
@@ -42,10 +44,11 @@ namespace ToDoListAcademia.Controladores
 
             if (compromisso.Id == null)
             {
-                comandoInsercao.Parameters.AddWithValue("ID", DBNull.Value);
+                comandoInsercao.Parameters.AddWithValue("ID_CONTATO", DBNull.Value);
             }
             else
-                comandoInsercao.Parameters.AddWithValue("ID", compromisso.Id);
+                comandoInsercao.Parameters.AddWithValue("ID_CONTATO", compromisso.Id);
+
             object id = comandoInsercao.ExecuteScalar();
 
             compromisso.Id = Convert.ToInt32(id);
@@ -67,7 +70,8 @@ namespace ToDoListAcademia.Controladores
                         [ASSUNTO] = @ASSUNTO,
                         [LOCAL] = @LOCAL,
                         [DATACOMPROMISSO] = @DATACOMPROMISSO,
-                        [HORAINICIO] = @HORAINICIO
+                        [HORAINICIO] = @HORAINICIO,
+                        [ID_CONTATO] = @ID_CONTATO
                     WHERE
                         [ID] = @ID";
 
@@ -119,7 +123,8 @@ namespace ToDoListAcademia.Controladores
                         [LOCAL],
                         [DATACOMPROMISSO],
                         [DATATERMINO],
-                        [HORAINICIO]
+                        [HORAINICIO],
+                        [ID_CONTATO]
                     FROM 
                         TBCOMPROMISSOS
                     WHERE 
