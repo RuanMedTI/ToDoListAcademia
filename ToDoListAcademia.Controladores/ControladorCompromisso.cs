@@ -209,9 +209,9 @@ namespace ToDoListAcademia.Controladores
             return compromissos;
         }
 
-        public List<Compromisso> ObterCompromissosEntre(DateTime inicio, DateTime final, List<Compromisso> registros)
+        public List<Compromisso> ObterCompromissosEntre(DateTime dataCompromisso, DateTime dataTermino, List<Compromisso> registros)
         {
-            return registros.FindAll(x => x.DataCompromisso >= inicio && x.DataTermino <= final);
+            return registros.FindAll(x => x.DataCompromisso >= dataCompromisso && x.DataTermino <= dataTermino);
         }
     }
 }

@@ -102,16 +102,18 @@ namespace ToDoListAcademia.ConsoleApp
         {
             Console.Clear();
             Console.Write("Digite a Data Inicial :");
-            DateTime inicio = Convert.ToDateTime(Console.ReadLine());
+            DateTime dataCompromisso = Convert.ToDateTime(Console.ReadLine());
             Console.Clear();
             Console.Write("Digite a Data Final :");
-            DateTime final = Convert.ToDateTime(Console.ReadLine());
+            DateTime dataTermino = Convert.ToDateTime(Console.ReadLine());
 
             Console.Clear();
-            Console.WriteLine($"Consulta em andamento : {inicio.ToString("d")} e {final.ToString("d")}");
+            Console.WriteLine($"Consulta em andamento : {dataCompromisso.ToString("d")} e {dataTermino.ToString("d")}");
+
+            ConfigurarTela("Visualizando os compromissos...");
 
             List<Compromisso> compromissos =
-                controlador.ObterCompromissosEntre(inicio, final, controlador.SelecionarTodosOsCompromissos());
+                controlador.ObterCompromissosEntre(dataCompromisso, dataTermino, controlador.SelecionarTodosOsCompromissos());
         }
     }
 }
