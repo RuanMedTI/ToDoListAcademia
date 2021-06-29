@@ -213,5 +213,6 @@ namespace ToDoListAcademia.Controladores
         {
             return registros.FindAll(x => x.DataCompromisso >= dataCompromisso && x.DataTermino <= dataTermino);
         }
+
     }
 }

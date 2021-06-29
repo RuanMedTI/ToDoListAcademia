@@ -114,6 +114,13 @@ namespace ToDoListAcademia.ConsoleApp
 
             List<Compromisso> compromissos =
                 controlador.ObterCompromissosEntre(dataCompromisso, dataTermino, controlador.SelecionarTodosOsCompromissos());
+
+            if (compromissos.Count == 0)
+            {
+                Console.Clear();
+                Console.WriteLine("Não existem registros cadastrados!");
+                Console.ReadLine();
+            }
         }
     }
 }
