@@ -101,10 +101,10 @@ namespace ToDoListAcademia.ConsoleApp
         public void VisualizarCompromissosEntreDatas()
         {
             Console.Clear();
-            Console.Write("Digite a Data Inicial :");
+            Console.Write("Digite a Data Inicial (Data Padrão BR):");
             DateTime dataCompromisso = Convert.ToDateTime(Console.ReadLine());
             Console.Clear();
-            Console.Write("Digite a Data Final :");
+            Console.Write("Digite a Data Final (Data Padrão BR):");
             DateTime dataTermino = Convert.ToDateTime(Console.ReadLine());
 
             Console.Clear();

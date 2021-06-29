@@ -16,7 +16,7 @@ namespace ToDoListAcademia.Controladores
             comandoInsercao.Connection = con;
 
             string sqlInsercao =
-                @"INSERT INTO TBCOMPROMISSOS
+                @"INSERT INTO TBCOMPROMISSO
                     (
                         [ASSUNTO],
                         [LOCAL],
@@ -65,7 +65,7 @@ namespace ToDoListAcademia.Controladores
             comandoAtualizacao.Connection = con;
 
             string sqlAtualizacao =
-                @"UPDATE TBCOMPROMISSOS
+                @"UPDATE TBCOMPROMISSO
                     SET
                         [ASSUNTO] = @ASSUNTO,
                         [LOCAL] = @LOCAL,
@@ -96,7 +96,7 @@ namespace ToDoListAcademia.Controladores
             comandoExclusao.Connection = con;
 
             string sqlExclusao =
-                @"DELETE FROM TBCOMPROMISSOS	                
+                @"DELETE FROM TBCOMPROMISSO                
 	                WHERE 
 		                [ID] = @ID";
 
@@ -126,7 +126,7 @@ namespace ToDoListAcademia.Controladores
                         [HORAINICIO],
                         [ID_CONTATO]
                     FROM 
-                        TBCOMPROMISSOS
+                        TBCOMPROMISSO
                     WHERE 
                         ID = @ID";
 
@@ -177,7 +177,7 @@ namespace ToDoListAcademia.Controladores
                         HORAINICIO,
                         ID_CONTATO
                     FROM 
-                        TBCOMPROMISSOS";
+                        TBCOMPROMISSO";
 
             comandoSelecao.CommandText = sqlSelecao;
 
